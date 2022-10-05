@@ -14,6 +14,6 @@ class Thing(models.Model):
     quantity=models.IntegerField(
        validators = [MaxValueValidator(100),MinValueValidator(1)] 
     )
-    #Required field
-    REQUIRED_FIELDS = ['name','description','quantity']
+    
+    
     
