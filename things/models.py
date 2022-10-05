@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.core.validators import RegexValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 class User(AbstractUser):
     name =models.CharField(
@@ -12,6 +12,5 @@ class User(AbstractUser):
         max_length = 120,
        )
     quantity=models.IntegerField(
-    MinValueValidator = 0,
-    MaxValueValidator = 100,
+       validators = [MaxValueValidator(100),MinValueValidator(1)] 
     )
