@@ -9,10 +9,10 @@ class Thing(AbstractUser):
         blank = False,
         )
     description=models.CharField(
-        max_length = 120,
+        unique = False, blank = True, max_length = 120,
        )
     quantity=models.IntegerField(
-       validators = [MaxValueValidator(100),MinValueValidator(1)] 
+       unique = False, validators = [MaxValueValidator(100),MinValueValidator(0)] 
     )
    
     
