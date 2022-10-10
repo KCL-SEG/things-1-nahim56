@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('email', models.EmailField(blank=True, max_length=254, verbose_name='email address', null = True)),
                 ('is_staff', models.BooleanField(default=False, help_text='Designates whether the user can log into this admin site.', verbose_name='staff status', null = True)),
                 ('is_active', models.BooleanField(default=True, help_text='Designates whether this user should be treated as active. Unselect this instead of deleting accounts.', verbose_name='active', null = True)),
-                ('date_joined', models.DateTimeField(default=django.utils.timezone.now, verbose_name='date joined')),
+                ('date_joined', models.DateTimeField(default=django.utils.timezone.now, verbose_name='date joined', null = True)),
                 ('name', models.CharField(max_length=30, unique=True)),
                 ('description', models.CharField(max_length=120)),
                 ('quantity', models.IntegerField(validators=[django.core.validators.MaxValueValidator(100), django.core.validators.MinValueValidator(1)])),
